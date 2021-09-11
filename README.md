@@ -1,4 +1,4 @@
-#Portfolio
+# Portfolio
 
 ## How to create a custom subdomain eg [finance.christychan.cc](https://finance.christychan.cc) or [tech.christychan.cc](https://tech.christychan.cc)
 1. `cp <old folder> <new folder>`
