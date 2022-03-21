@@ -18,5 +18,5 @@
 11. Settings -> Pages -> Custom Domain Name -> `<custom subdomain>` eg `tech.christychan.cc`
 12. Enable HTTPS
 
-##How to archive/unarchive a custom subdomain
+## How to archive/unarchive a custom subdomain
 In your repo, go to Settings -> Pages -> Source -> `None` or `<branch name>`.
