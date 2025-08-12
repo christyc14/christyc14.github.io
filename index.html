@@ -22,12 +22,13 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <!-- <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"> -->
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
 
   <!-- =======================================================
   * Template Name: MyResume - v4.3.0
@@ -38,8 +39,493 @@
 </head>
 
 <body>
-  WIP - Please see my linkedin here: <a href="https://www.linkedin.com/in/christychan14/" class="linkedin" target="_blank" rel="noopener noreferrer"><i class="bx bxl-linkedin"></i></a>
+   <!-- <button id="theme-switcher">Switch themes!</button> -->
+  <!-- ======= Mobile nav toggle button ======= -->
+  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <!-- <button id="switch" onclick="toggleTheme()">Switch</button> -->
+  <label id="switch" class="switch">
+    <input type="checkbox" onchange="toggleTheme()" id="slider">
+    <span class="slider round"></span>
+</label>
 
+  <script>
+    // function to set a given theme/color-scheme
+    function setTheme(themeName) {
+        localStorage.setItem('theme', themeName);
+        document.documentElement.className = themeName;
+    }
+
+    // function to toggle between light and dark theme
+    function toggleTheme() {
+        if (localStorage.getItem('theme') === 'theme-dark') {
+            setTheme('theme-light');
+        } else {
+            setTheme('theme-dark');
+        }
+    }
+
+    // Immediately invoked function to set the theme on initial load
+    (function () {
+      setTheme('theme-dark');
+        // if (localStorage.getItem('theme') === 'theme-dark') {
+        //     setTheme('theme-dark');
+        // } else {
+        //     setTheme('theme-light');
+        // }
+    })();
+</script>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+    <nav id="navbar" class="navbar nav-menu">
+      <ul>
+        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a>
+        </li>
+        <li><a href="#services" class="nav-link scrollto"><i class="bx bx-book-heart"></i> <span>Other Interests</span></a></li>
+        <!-- <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li> -->
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center">
+    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Christy Chan</h1>
+      <p> Welcome to my webpage :)</p>
+      <p><span class="typed" data-typed-items="GB Powerlifting, GB Shooting, Consulting, Skincare, Foodie"></span></p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/christychan14/" class="linkedin" target="_blank" rel="noopener noreferrer"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/christyc14" class="github" target="_blank" rel="noopener noreferrer"><i class="bx bxl-github"></i></a>
+        <a href="https://linktr.ee/christychan" class="linktree" target="_blank" rel="noopener noreferrer"><i class="bx bxs-tree"></i></a>
+        <a href="https://twitter.com/christyc14_" class="twitter" target="_blank" rel="noopener noreferrer"><i class="bx bxl-twitter"></i></a>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="section-title col-lg-8">
+            <h2>About</h2>
+            <p>I'm an Associate Consultant at Bain & Company. I have strong academic and
+              sporting related achievements, most notably being selected for Great Britain in target rifle shooting and
+              powerlifting. </p><br>
+            <p>I'm originally from Hong Kong, so am able to speak fluent English, conversational Cantonese & Mandarin.</p> <br>
+            <p>I'd love to connect with people from all walks of life, so please don't hesitate to send me a message!</p>
+          </div>
+          <div class="col-lg-4">
+            <img src="assets/img/portfolio/profile.jpg" class="img-fluid" alt="">
+          </div> 
+    </section><!-- End About Section -->
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>MEng (Hons) Electronic &amp; Information Engineering</h4>
+              <h5>2018 - 2022</h5>
+              <p><em>Imperial College London</em></p>
+              <ul>
+                <li>Obtained a 1st class degree (equivalent to a 4.0 GPA).</li>
+                <li>Dissertation title: 'Design, Implementation and Comparative Evaluation of Two Skincare Product Recommender Systems'.</li>
+                <li>Awarded the <b>Imperial College Alumni Association of Hong Kong Scholarship</b>.</li>
+                <li>Awarded the <b>IET Diamond Jubilee Scholarship supported by the Royal Commission for the Exhibition of 1851</b>.</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>International Baccalaureate Diploma</h4>
+              <h5>2013 - 2018</h5>
+              <p><em>Sevenoaks School, Sevenoaks, UK</em></p>
+              <ul>
+                <li>Achieved the IB Diploma award, 42/45 points (Top 5% globally). Obtained an A in Extended Essay in Mathematics. GCSEs: 11 A*s, 1 A.</li>
+                <li>Elected Chair of the Sixth Form Committee, Vice Captain of the rifle club, Senior Player of the Year 2018, Leader of Pride Society.</li>
+                <li>Attained the <b>Diamond, Gold, Silver and Bronze</b> Duke of Edinburgh’s Awards.</li>
+                <li>Awarded <b>the Gandon Science/Technology Prize</b> - prize for the highest grade in the technology department.</li>
+              </ul>
+             </div>
+          </div>
+          <div class="col-lg-12">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Associate Consultant</h4>
+              <h5>January 2023 - present</h5>
+              <p>Bain & Company, London, UK</p>
+              <ul>
+                <li>Worked on cross-functional transformation and growth strategy projects across financial services and infrastructure sectors, driving measurable business outcomes through analytical rigor and stakeholder alignment.</li>
+                <li>Selected project experience:</li>
+                <ul>
+                  <li>Drove business transformation initiative for £6.4bn water infrastructure program, securing C-suite buy-in and £3bn loan approval through rigorous analysis of operational inefficiencies and investment priorities.</li>
+                  <ul>
+                    <li>Consolidated fragmented data sources into a master project dashboard in Excel, improving visibility on project execution, enabling informed investment decisions for the next Asset Management Period (AMP).</li>
+                    <li>Led cross-functional workshops across multiple business units, translating strategic discussions into actionable growth initiatives and investment priorities that drove targeted infrastructure improvements.</li>
+                    <li>Created a framework to prioritize critical infrastructure investments leveraging insights from project managers and engineers to enable data-driven decisions on projects impacting 16m customers.</li>
+                  </ul>
+                  <li>
+                    Managed a €100M cybersecurity transformation program for a major oil & gas firm supplying 1/3rd of Europe’s natural gas, enhancing 27 initiatives and 116 capabilities to achieve industry-standard cybersecurity maturity overall.
+                    <ul>
+                      <li>Designed and implemented a comprehensive tracking and reporting system in Excel, integrating complex technical requirements to deliver board-ready maturity reporting across 116 capabilities. </li>
+                      <li>Validated cybersecurity initiatives, contributing 43% of the phase’s maturity improvement across areas such as IT/OT Vulnerability Management and Cybersecurity Portfolio Management.</li>
+                      <li>Guided initiative owners on best practices, managing conflicting priorities across multiple stakeholders to optimize strategic execution and deliver measurable improvements.</li>
+                      <li>Coordinated cross-functional delivery across technical teams and senior management, ensuring alignment between system requirements and business objectives to meet regulatory compliance deadlines. </li>
+                    </ul>
+                  </li>
+                  <li>Developed commercialization strategies and business cases for generative AI, creating go-to-market materials, internal knowledge repositories, and training resources to boost generative AI adoption at Bain by 20%.
+                    <ul>
+                      <li>Created persuasive sector-specific ‘Imagine-if’ use cases to drive internal and client buy-in.</li>
+                      <li>Captured insights from previous AI projects to build a knowledge base, improving scalability and decision-making for future AI initiatives.</li>
+                    </ul>
+                  </li>
+                  <li>Conducted deep-dive consumer research and market analysis on plant-based meat and emerging ESG trends, to identify growth opportunities, translating complex data insights into actionable strategic recommendations.
+                    <ul>
+                      <li>Developed strategic marketing materials and consumer engagement tools, including interactive personality assessments, to drive research visibility and stakeholder buy-in across consumer-facing sectors.</li>
+                      <li>Translated complex consumer trend analysis into actionable strategic recommendations for brand growth and market positioning, directly informing go-to-market strategies for consumer-facing sectors.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Led data analysis for a €30M cost reduction initiative at a PE-backed fund administrator, conducting strategic benchmarking and spend optimization to identify €500K+ in savings through performance and trend analysis.
+                  </li>
+                  <li>
+                    Supported Ark Schools on its growth strategy by analyzing demographic trends, funding patterns, and enrollment risks, providing data-backed recommendations on where expansion could have the greatest community impact.
+                  </li>
+                </ul>
+                </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Algorithmic Trading Intern (Industrial Placement)</h4>
+              <h5>April - October 2021</h5>
+              <p>Morgan Stanley, London, UK</p>
+              <p><i>Part of the Low Latency Execution team, responsible for the Smart Order routing system, a liquidity seeking engine which determines the best trading venues to execute orders on.</i></p>
+              <ul>
+                <li>Built and optimized liquidity-seeking algorithms using C++, functional programming, and Python for Smart Order Routing across European equity venues, implementing low-latency execution strategies enhancing market efficiency.</li>
+              <ul>
+                <li>Drove a 15% increase in lit liquidity volume through developing a new strategy across major European venues.</li>
+                <li>Implemented a trading strategy that enabled the stabilization of a €1bn IPO, ensuring smooth market entry.</li>
+              </ul>              
+            </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Technology Summer Analyst</h4>
+              <h5>June - August 2020</h5>
+              <p>Morgan Stanley, Hong Kong</p>
+              <p><i>Part of the Electronic Trading Infrastructure team, responsible for building the foundational infrastructure for algorithmic trading.</i></p>
+              <ul>
+                <li>Led the integration of trading infrastructure data systems using Java, Python, and SQL, connecting to a high-performance visualization platform as part of the next generation algorithmic trading engine.</li>
+                <ul>
+                  <li>Developed front-end interfaces with HTML/CSS for internal data visualization, enabling technical teams to evaluate system performance and validate platform architecture.</li>
+                  <li>Implemented an event-driven data streaming solution in Java, leveraging event sourcing and TCP to improve reliability and scalability, presenting technical architecture to senior stakeholders.</li>
+                </ul>              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Research, Development & Design (RDD) Intern</h4>
+              <h5>June - September 2019</h5>
+              <p><em>Dyson, Malmesbury, UK</em></p>
+              <ul>
+                <li>Determined the feasibility of a new imaging technology in the sensors team for an upcoming robotic vacuum, allowing for detection of liquid, preventing robotic vacuums from spreading liquid on surfaces.</li>
+                <li>Implemented image processing routines to detect liquid. Presented to the Global Hardware Development Director on project findings, demonstrating to him the feasibility of using a specific imaging sensor type for water detection.</li>           
+              </ul>
+            </div>
+          </div>
+          </div>
+          <div class="col-lg-12">
+            <h3 class="resume-title">Leadership & Extracurricular Activities</h3>
+            <div class="resume-item">
+              <h4>Imperial College London</h4>
+              <ul>
+                <li>Shortlisted for the <b>Asian Women of Achievement Awards</b> in the <b>Sport</b> category (2022).</li>
+                <li>Won <b>Imperial College Sportswoman of the Year</b> and Faculty of Engineering <b>Sportsperson of the Year</b> (2020 – 21).</li>
+                <li>Elected <b>President</b> for Imperial College Barbell Club, responsible for a 500% increase in budget allocation for 2021, and a membership number increase of over 300%.</li>
+                <li>Elected <b>President</b> for Imperial College Women in Computing, founding the undergraduate chapter of the society (2021), running upskilling, outreach workshops, and socials.</li>
+                <li>Selected to represent <b>Great Britain</b> in the World Bench Press Championships, <b>ranked 1st</b> female rifle shooter in the UK (2021).</li>
+              </ul>
+            </div>
+        </div>
+    </section><!-- End Resume Section -->
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-card">Features</li>
+              <!-- <li data-filter=".filter-app">Projects</li> -->
+              
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/imperialqt.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Meet the Engineers - Christy</h4>
+                <p>Imperial College EEE Dept</p>
+                <div class="portfolio-links">
+                  <a href="https://www.imperial.ac.uk/electrical-engineering/about/what-do-electrical-and-electronic-engineers-do/christy-chan/" target="_blank"
+                    title="Link"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/wic.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Women in Computing Presidency</h4>
+                <p>Imperial College Computing Dept</p>
+                <div class="portfolio-links">
+                  <a href="https://www.imperial.ac.uk/computing/about/equality-and-diversity/women-in-computing/christy-chan/" target="_blank"
+                    title="Link"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/trophy.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Article about me in Imperial College's Newspaper</h4>
+                <p>Imperial College Felix</p>
+                <div class="portfolio-links">
+                  <!-- <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a> -->
+                  <a href="assets/img/portfolio/felix_1751.pdf" class="portfolio-details-lightbox" data-glightbox="type: external"
+                    title="Article"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/nsra.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>GB Drew Match Representation</h4>
+                <p>National Smallbore Rifle Association</p>
+                <div class="portfolio-links">
+                  <!-- <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a> -->
+                  <a href="drew-details.html" class="portfolio-details-lightbox" data-glightbox="type: external"
+                    title="Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/panel.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Diversity in Industry Panel</h4>
+                <p>Women in Computing and Department of Computing Society</p>
+                <div class="portfolio-links">
+                  <a href="panel-details.html" class="portfolio-details-lightbox" data-glightbox="type: external"
+                    title="Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/inwed.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>INWED2021 Feature</h4>
+                <p>Imperial College EEE Dept</p>
+                <div class="portfolio-links">
+                  <!-- <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a> -->
+                  <a href="https://blogs.imperial.ac.uk/electrical-engineering/2021/06/20/christy-chan/" target="_blank"
+                    title="Link"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/awa.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Asian Women of Achievement Awards Shortlist - Sport</h4>
+                <p>Asian Women of Achievement Awards</p>
+                <div class="portfolio-links">
+                  <!-- <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a> -->
+                    <a href="https://www.awaawards.com/our-alumni-category/2022/" target="_blank"
+                    title="Link"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- 
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/tmb.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>TryMe Beauty Startup</h4>
+                <p>Kickstart Global</p>
+                <div class="portfolio-links">
+                  <a href="tmb-details.html" class="portfolio-details-lightbox" data-glightbox="type: external"
+                    title="Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/electronicwoodwind.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Accessible Electronic Musical Instrument</h4>
+                <div class="portfolio-links">
+                  <a href="instrument-details.html" class="portfolio-details-lightbox" data-glightbox="type: external"
+                    title="Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div> -->
+      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+        <div class="portfolio-wrap">
+          <img src="assets/img/portfolio/iwd2022.png" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>IWD Panel</h4>
+            <p>Imperial College EEE Dept</p>
+            <div class="portfolio-links">
+              <!-- <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a> -->
+              <a href="https://amertzani.github.io/IWD/" target="_blank"
+                title="Link"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Other Interests</h2>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
+            data-aos-delay="200">
+            <div class="icon-box iconbox-orange ">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#3f3f3f"
+                    d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426">
+                  </path>
+                </svg>
+                <i class="bx bx-dumbbell"></i>
+              </div>
+              <h4><a href="">Powerlifting</a></h4>
+              <p>I no longer compete, but I continue to train multiple times a week.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in"
+            data-aos-delay="300">
+            <div class="icon-box iconbox-pink ">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#3f3f3f"
+                    d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781">
+                  </path>
+                </svg>
+                <i class="bx bx-dress"></i>
+              </div>
+              <h4><a href="">Fashion</a></h4>
+              <p>Fashion is a way for people to tell their story without saying a word.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box iconbox-blue ">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#3f3f3f"
+                    d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174">
+                  </path>
+                </svg>
+                <i class="bi bi-music-note"></i>
+              </div>
+              <h4><a href="">Live Music</a></h4>
+              <p>I really enjoy live music, frequently going to concerts when I have the chance. </p>
+            </div>
+          </div>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>Christy Chan</h3>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/christychan14/" class="linkedin" target="_blank" rel="noopener noreferrer"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/christyc14" class="github" target="_blank" rel="noopener noreferrer"><i class="bx bxl-github"></i></a>
+        <a href="https://linktr.ee/christychan" class="linktree" target="_blank" rel="noopener noreferrer"><i class="bx bxs-tree"></i></a>
+        <a href="https://twitter.com/christyc14_" class="twitter" target="_blank" rel="noopener noreferrer"><i class="bx bxl-twitter"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>MyResume</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: [license-url] -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
