@@ -1386,6 +1386,9 @@
   .bx-dumbbell:before {
     content: "\ea1f";
   }
+  .bx-dress:before {
+    content: "\ea1f";
+  }
   .bx-duplicate:before {
     content: "\ea20";
   }
