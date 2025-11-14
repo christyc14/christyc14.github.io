@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Christy Chan</title>
+  <meta content="Christy Chan" name="description">
+  <meta content="" name="keywords">
+  <meta property="og:image" content="assets/img/portfolio/profile.jpg"/>
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyResume - v4.3.0
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+    /* Simplified single-column layout for matthewblode.com style */
+    :root {
+      --primary-color: #ffffff;
+      --bg-color: #0a0a0a;
+      --text-color: #ffffff;
+      --accent-color: #6366f1;
+    }
+
+    html.theme-light {
+      --primary-color: #000000;
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --accent-color: #6366f1;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      font-family: "Open Sans", sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      display: none;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    section {
+      margin-bottom: 80px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-family: "Raleway", sans-serif;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      font-family: "Raleway", sans-serif;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top: 40px;
+      margin-bottom: 15px;
+      color: var(--accent-color);
+      font-family: "Raleway", sans-serif;
+    }
+
+    h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+
+    a:hover {
+      opacity: 0.8;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--accent-color);
+      margin-bottom: 30px;
+      font-weight: 500;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--text-color);
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--accent-color);
+      border-color: var(--accent-color);
+    }
+
+    .social-links svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 40px 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    footer h3 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      margin-top: 0;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .mobile-nav-toggle {
+      display: none;
+    }
+
+    #switch {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 4px;
+      margin-top: 10px;
+      transition: opacity 0.3s ease;
+      text-decoration: none;
+    }
+
+    .cta-button:hover {
+      opacity: 0.8;
+    }
+
+    .resume-item h4 {
+      margin-top: 15px;
+      margin-bottom: 3px;
+    }
+
+    .resume-item p {
+      font-style: italic;
+      margin-bottom: 10px;
+      color: var(--accent-color);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        padding: 40px 15px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Theme Toggle -->
+  <label id="switch" class="switch">
+    <input type="checkbox" onchange="toggleTheme()" id="slider">
+    <span class="slider round"></span>
+  </label>
+
+  <script>
+    function setTheme(themeName) {
+      localStorage.setItem('theme', themeName);
+      document.documentElement.className = themeName;
+    }
+
+    function toggleTheme() {
+      if (localStorage.getItem('theme') === 'theme-dark') {
+        setTheme('theme-light');
+      } else {
+        setTheme('theme-dark');
+      }
+    }
+
+    (function () {
+      setTheme('theme-dark');
+    })();
+  </script>
+
+  <main id="main">
+    <!-- Hero Section -->
+    <section id="hero">
+      <h1>Christy Chan</h1>
+      <p class="hero-subtitle">Founding Consultant at <a href="https://senastrategy.ai" target="_blank" rel="noopener noreferrer">Sena Strategy</a> · Forbes 30U30 · Former GB Athlete</p>
+      
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/christychan14/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+          <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <title>LinkedIn</title>
+            <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.98h4.56V24H.22V8.98zM8.98 8.98h4.37v2.02h.06c.61-1.15 2.11-2.36 4.35-2.36 4.66 0 5.52 3.06 5.52 7.04V24h-4.56v-7.16c0-1.71-.03-3.91-2.38-3.91-2.38 0-2.74 1.86-2.74 3.78V24H8.98V8.98z"/>
+          </svg>
+        </a>
+        <a href="https://github.com/christyc14" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+          <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <title>GitHub</title>
+            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.76.41-1.27.75-1.56-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11.04 11.04 0 0 1 2.9-.39c.98 0 1.97.13 2.9.39 2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.8 1.07.8 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.21.68.8.56C20.21 21.4 23.5 17.09 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>About me</h2>
+      <p>I'm a Founding Consultant at <a href="https://senastrategy.ai" target="_blank" rel="noopener noreferrer">Sena Strategy</a>, an AI-native strategy company helping boards translate AI potential into measurable value through independent, financially grounded consultancy.</p>
+      <p>I have strong academic and sporting achievements, including selection for Great Britain in target rifle shooting and powerlifting.</p>
+      <p>Originally from Hong Kong, I speak fluent English and conversational Cantonese and Mandarin.</p>
+      <p>I welcome professional connections and inquiries; please feel free to get in touch.</p>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="resume">
+      <h2>Experience</h2>
+      <p>My journey building products that scale and helping organisations translate AI into measurable impact.</p>
+
+      <h3>2025 - Present</h3>
+      <div class="resume-item">
+        <h4>Founding Consultant</h4>
+        <p><a href="https://senastrategy.ai" target="_blank" rel="noopener noreferrer">Sena Strategy</a></p>
+        <p>Sena Strategy is an AI-native advisory firm with deep and proven expertise in consultancy, strategy, and banking. We help mid-market firms translate AI from concept to commercial impact.</p>
+        <p>AI is transforming industries at speed, yet many organisations are trapped between understanding and execution; we cut through the noise to deliver clarity on where and how to invest in AI to generate measurable financial value.</p>
+      </div>
+
+      <h3>2023 - 2025</h3>
+      <div class="resume-item">
+        <h4>Associate Consultant</h4>
+        <p><em>Bain & Company, London, UK</em></p>
+        <p>Worked on high-impact growth strategy and transformation initiatives across financial services, water infrastructure, and oil & gas sectors, advising senior leadership on investment strategy, operational efficiency, and regulatory challenges.</p>
+        <p><strong>Selected projects:</strong></p>
+        <ul>
+          <li>Defined Bain's generative AI strategy and workforce plan – developing commercialisation frameworks, internal capabilities and knowledge assets that accelerated firm-wide adoption by 20%.</li>
+          <li>Drove a €100M cybersecurity transformation program for a major oil & gas firm supplying 1/3rd of Europe's natural gas, enhancing 27 initiatives and 116 capabilities to achieve industry-standard cybersecurity maturity overall.</li>
+          <li>Designed a multi-year capital allocation strategy for a £6.4bn water infrastructure project, securing C-suite buy-in and £3bn loan approval through rigorous analysis of operational inefficiencies and investment priorities.</li>
+          <li>Conducted consumer behavior analysis, identifying emerging market trends on ESG and key drivers of consumer adoption of plant-based meat, co-authoring insights in Bain's <em>The Visionary CEO's Guide to Sustainability</em>.</li>
+          <li>Led data analysis for a €30M cost reduction initiative at a PE-backed fund administrator, identifying €500K+ in savings.</li>
+        </ul>
+      </div>
+
+      <h3>2021 - 2023</h3>
+      <div class="resume-item">
+        <h4>Algorithmic Trading Intern & Technology Summer Analyst</h4>
+        <p><em>Morgan Stanley, London & Hong Kong</em></p>
+        <ul>
+          <li><strong>Low Latency Execution team (2021):</strong> Built and optimized liquidity-seeking algorithms using C++, Python for Smart Order Routing across European equity venues. Drove a 15% increase in lit liquidity volume and implemented a trading strategy that enabled stabilization of a €1bn IPO.</li>
+          <li><strong>Electronic Trading Infrastructure team (2020):</strong> Led the integration of trading infrastructure data systems using Java, Python, and SQL. Developed front-end interfaces and implemented an event-driven data streaming solution leveraging event sourcing.</li>
+        </ul>
+      </div>
+
+      <h3>2019 - 2020</h3>
+      <div class="resume-item">
+        <h4>Research, Development & Design (RDD) Intern</h4>
+        <p><em>Dyson, Malmesbury, UK</em></p>
+        <p>Determined the feasibility of a new imaging technology in the sensors team for an upcoming robotic vacuum. Implemented image processing routines to detect liquid and presented findings to the Global Hardware Development Director.</p>
+      </div>
+
+      <h2>Education</h2>
+      <div class="resume-item">
+        <h4>MEng (Hons) Electronic & Information Engineering</h4>
+        <p><em>Imperial College London, 2018–2022</em></p>
+        <ul>
+          <li>First class honours (4.0 GPA equivalent)</li>
+          <li>Dissertation: 'Design, Implementation and Comparative Evaluation of Two Skincare Product Recommender Systems'</li>
+          <li>Awarded the <strong>Imperial College Alumni Association of Hong Kong Scholarship</strong></li>
+          <li>Awarded the <strong>IET Diamond Jubilee Scholarship supported by the Royal Commission for the Exhibition of 1851</strong></li>
+        </ul>
+      </div>
+
+      <h2>Extracurricular</h2>
+      <div class="resume-item">
+        <ul>
+          <li>Selected to represent <strong>Great Britain</strong> in the World Bench Press Championships; ranked 1st female rifle shooter in the UK (2021)</li>
+          <li>Shortlisted for the <strong>Asian Women of Achievement Awards</strong> in the Sport category (2022)</li>
+          <li>Won <strong>Imperial College Sportswoman of the Year</strong> and Faculty of Engineering <strong>Sportsperson of the Year</strong> (2020–21)</li>
+          <li>Elected <strong>President</strong> of Imperial College Barbell Club (300%+ membership increase)</li>
+          <li>Elected <strong>President</strong> of Imperial College Women in Computing, founding the undergraduate chapter</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Let's Connect Section -->
+    <section id="connect">
+      <h2>Let's connect</h2>
+      <p>Want to talk about AI strategy, growth initiatives, or potential collaboration? Let's connect.</p>
+      <a href="mailto:christy@senastrategy.ai" class="cta-button">Get in touch</a>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/christychan14/" target="_blank" rel="noopener noreferrer" title="LinkedIn">Email</a>
+        <a href="https://www.linkedin.com/in/christychan14/" target="_blank" rel="noopener noreferrer" title="LinkedIn">LinkedIn</a>
+        <a href="https://github.com/christyc14" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-content">
+      <h3>Christy Chan</h3>
+      <p>&copy; 2025 Christy Chan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+</body>
+
+</html>

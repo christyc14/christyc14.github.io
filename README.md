@@ -1,5 +1,5 @@
 # Portfolio
-
+## NOTE: THIS REPO IS NOW ONLY USED TO HOST FROM GH-PAGES BRANCH. SEE ethereal-portfolio-hub REPO FOR ACTUAL WEBSITE CODE.
 ## How to create a custom subdomain eg [finance.christychan.cc](https://finance.christychan.cc) or [tech.christychan.cc](https://tech.christychan.cc)
 1. `cp <old folder> <new folder>`
 2. `cd <new folder>`
